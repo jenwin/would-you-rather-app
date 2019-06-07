@@ -171,7 +171,7 @@ PollDetails.propTypes = {
   authedUser: PropTypes.string.isRequired,
   users: PropTypes.object.isRequired,
   userVote: PropTypes.string,
-  question: PropTypes.object.isRequired,
+  question: PropTypes.object,
   optOne: PropTypes.string.isRequired,
   optTwo: PropTypes.string.isRequired
 }
