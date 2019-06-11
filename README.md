@@ -1,5 +1,5 @@
 # would-you-rather-app
-An app built with React and Redux. A user can login, ask (create) and answer questions, view poll results, view scores on the leadership board.
+An app built with React and Redux. A user can login, ask and answer questions, view poll results, view the highest scores on the leaderboard.
 
 ## How to Start
 - Clone or Download
