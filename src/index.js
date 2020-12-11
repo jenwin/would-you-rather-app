@@ -7,7 +7,8 @@ import middleware from './middleware';
 
 import App from './components/App';
 import 'bootstrap/dist/css/bootstrap.css';
-import './index.css';
+import './css/index.css';
+import './css/responsive.css';
 
 const store = createStore(reducers, middleware);
 
