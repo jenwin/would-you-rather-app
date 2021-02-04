@@ -4,8 +4,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from './reducers';
 import middleware from './middleware';
-
-import App from './components/App';
+import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 import './css/index.css';
 import './css/responsive.css';
