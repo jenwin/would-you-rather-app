@@ -8,7 +8,7 @@ import Login from './components/Login';
 import Nav from './components/Nav';
 import Home from './components/Home';
 import PollQuestion from './components/PollQuestion';
-import Add from './components/Add';
+import AddQuestion from './components/AddQuestion';
 import LeaderBoard from './components/LeaderBoard';
 import PollDetails from './components/PollDetails';
 import Footer from './components/Footer';
@@ -38,7 +38,7 @@ class App extends Component {
                   <Switch>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/pollquestion" component={PollQuestion} />
-                    <Route exact path="/add" component={Add} />
+                    <Route exact path="/add" component={AddQuestion} />
                     <Route exact path="/leaderboard" component={LeaderBoard} />
                     <Route exact path="/questions/:question_id" component={PollDetails} />
                     <Route component={NotFound} />

@@ -11,33 +11,58 @@ class LeaderBoard extends Component {
     const { userPoints, users } = this.props
 
     return (
-     <div className="create-leaderboard-container">
-       <div className="leaderboard-container">
-         <h3 className="leaderboard-title">Leaderboard</h3>
-         <ul className="leaderboard-list">
-           {userPoints.map(points => (
-             <li className="leaderboard-items" key={points.id}>
-                <div className="user-img">
+      <div className="create-leaderboard-container">
+        <div className="leaderboard-container">
+          <h3 className="leaderboard-title">Leaderboard</h3>
+          <ul className="leaderboard-list">
+            {userPoints.map(points => (
+              <li className="leaderboard-items" key={points.id}>
+                {/* user name */}
+                <div className="leaderboard-name-wrapper">
+                  <p className="leaderboard-name">
+
+                  {/* user image */}
                   <Image
                     className="user-photo leaderboard-photo"
                     src={users[points.id].avatarURL}
                     alt={users[points.id].name}
                   />
+                    {users[points.id].name}
+                  </p>
                 </div>
-                <div className="leaderboard-wrapper">
-                  <div className="leaderboard-name">{users[points.id].name}</div>
-                  <div className="questions-asked">Asked: {users[points.id].questions.length}</div>
-                  <div className="questions-answered">Answered: {Object.keys(users[points.id].answers).length}</div>
-                </div>
-                <div className="leaderboard-total">
-                  <div className="leaderboard-score">Score</div>
-                  <div className="score-container">
-                    <div className="leaderboard-points">
+
+                <div className="leaderboard-results">
+                  {/* asked question */}
+                  <div className="leaderboard-label leaderboard-asked">
+                    Asked
+                    <div className="leaderboard-container">
+                      <p className="leaderboard-results-label">
+                        {users[points.id].questions.length}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* answered question */}
+                  <div className="leaderboard-label leaderboard-answer">
+                    Answered
+                    <div className="leaderboard-container">
+                      <p className="leaderboard-results-label">
+                        {Object.keys(users[points.id].answers).length}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* score */}
+                  <div className="leaderboard-label leaderboard-score">
+                    Score
+                  <div className="leaderboard-container">
+                    <div className="leaderboard-results-label">
                       {users[points.id].questions.length + Object.keys(users[points.id].answers).length}
                     </div>
                   </div>
+                  </div>
                 </div>
-                </li>
+              </li>
             ))}
            </ul>
        </div>

@@ -23,7 +23,7 @@ class Nav extends Component {
     return (
       <Fragment>
         <div className="nav-container">
-          <div className="links-list">
+          <div className="list-links">
             <div className="nav-list nav-home">
               <i className="fas fa-home"></i>
               <Link className="nav-links home" to="/">Home</Link>
@@ -37,8 +37,8 @@ class Nav extends Component {
               <Link className="nav-links leaderboard" to="/leaderboard">Leadership Board</Link>
             </div>
           </div>
-          <div className="nav-user-info">
-          <span className="nav-user">{userId.name}</span>
+          <div className="nav-username">
+          <span className="nav-name">{userId.name}</span>
             <Image
               src={userId.avatarURL}
               className="nav-user-img"

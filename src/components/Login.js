@@ -32,7 +32,7 @@ class Login extends Component {
     const disabled = value === '' ? true : false;
 
     return (
-      <div className="login-page">
+      <div className="login-container">
         <h1 className="login-title">Would You Rather?</h1>
           <Form.Group onChange={this.handleForm}>
             <Form.Label>Sign In</Form.Label>
@@ -53,7 +53,7 @@ class Login extends Component {
             variant="light"
             onClick={this.handleLogin}
             disabled={disabled}>
-            LOGIN
+              LOGIN
           </Button>
       </div>
     );

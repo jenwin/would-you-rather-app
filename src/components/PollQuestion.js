@@ -16,29 +16,38 @@ class PollQuestion extends Component {
 
     return (
       <div className="unanswered-container">
-        <div className="date">Posted on {_getDate(question.timestamp)}</div>
-        <Image
-          className="user-photo"
-          src={userId.avatarURL}
-          alt={userId.name}
-        />
-        <div className="info-wrapper">
-          <div className="info-title">
-            <p>{userId.name} asks...</p>
+        <div className="date">{_getDate(question.timestamp)}</div>
+        <div className="content-wrapper">
+
+          {/* user name, image */}
+          <div className="poll-questions-title-one">
+            <p>
+              <Image
+                className="user-photo"
+                src={userId.avatarURL}
+                alt={userId.name}
+              />
+              {userId.name} asks...
+            </p>
           </div>
-          <div className="info-title">
+
+          {/* content section */}
+          <div className="poll-questions-title-two">
             <p>Would you rather?</p>
           </div>
           <div className="unanswered-options">
             <div className="unanswered-options-text">
               {question.optionOne.text}
             </div>
+            <div className="or">
+              or
+            </div>
             <div className="unanswered-options-text">
               {question.optionTwo.text}
             </div>
           </div>
         </div>
-        <div className="unanswered-link">
+        <div className="view-poll">
           <Link to={`/questions/${question_id}`}>
             <Button variant="secondary">View Poll</Button>
           </Link>

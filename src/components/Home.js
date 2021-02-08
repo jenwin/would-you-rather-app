@@ -14,7 +14,7 @@ class Home extends Component {
     const { unanswered, answered } = this.props;
 
     return (
-      <div className="poll-list">
+      <div className="poll-home">
         <Tabs className="poll-tabs">
           <Tab
             eventKey="home"
@@ -30,7 +30,7 @@ class Home extends Component {
           <Tab
             eventKey="profile"
             title="Answered Questions">
-              <ul className="poll-list-questions">
+              <ul className="poll-questions">
                 {answered.map(question => (
                   <li key={question.id}>
                     <PollQuestion id={question.id} />

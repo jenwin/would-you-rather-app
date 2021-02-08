@@ -48,10 +48,10 @@ class Add extends Component {
 
   return (
     <div className="create-leaderboard-container">
-      <h3 className="create-question">Create Your Question</h3>
-      <h4 className="info-title">Would you rather...</h4>
+      <h3 className="add-question">ask a question</h3>
+      <h4 className="add-question-title">Would you rather...</h4>
         <Form onSubmit={this.handleSubmitForm}>
-          <InputGroup className="create-input">
+          <InputGroup className="add-input">
             <FormControl
               name="optionOneText"
               onChange={this.handleInput}
@@ -61,7 +61,7 @@ class Add extends Component {
               required>
             </FormControl>
           </InputGroup>
-          <p className="or center">OR</p>
+          <p className="or">OR</p>
           <InputGroup>
             <FormControl
               name="optionTwoText"
@@ -77,7 +77,7 @@ class Add extends Component {
           <Button
             type="submit"
             variant="secondary"
-            className="create-btn"
+            className="add-question-btn"
             onClick={this.handleNewQuestion}
             disabled={disabled}>Submit
           </Button>

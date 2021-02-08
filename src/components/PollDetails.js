@@ -61,51 +61,55 @@ class PollDetails extends Component {
 
     return (
       <div className="poll-list">
-        <div className="back-btn">
-          <Button
-            variant="secondary"
-            onClick={this.handleBackBtn}>Back
-          </Button>
-        </div>
-        <div className="unanswered-container results-container">
+        <div className="unanswered-container">
           {(userVote === undefined) ? (
             <Fragment>
-              <div className="info-section">
-                <h3 className="info-user">{users[question.author].name} asks:</h3>
-                <Image
-                  className="user-photo"
-                  src={users[question.author].avatarURL}
-                  alt={users[question.author].name}
-                />
-                <div className="info-wrapper">
-                  <div>
-                    <p className="info-title">Would you rather...</p>
-                  </div>
-                  <form className="unanswered-form" onSubmit={this.handleSubmit}>
-                    <label>
-                      <input
-                        type="radio"
-                        className="option-radio"
-                        name="options"
-                        value="optionOne"
-                        onChange={this.handleRadio}
-                        checked={value === 'optionOne'}
-                      />{question.optionOne.text}
-                    </label>
-                    <label>
-                      <input
+              <div className="user-container">
+                {/* user name, image */}
+                <div className="user-info">
+                   <Image
+                    className="user-photo"
+                    src={users[question.author].avatarURL}
+                    alt={users[question.author].name}
+                  />
+                  <h3 className="user-heading">
+                    {users[question.author].name} asks:
+                  </h3>
+                </div>
+
+                {/* poll options section */}
+                <div className="content-wrapper">
+                  <p className="content-label">
+                    Would you rather...
+                  </p>
+                  <form
+                    className="options-form"
+                    onSubmit={this.handleSubmit}>
+                      <label>
+                        <input
+                          type="radio"
+                          className="option-radio"
+                          name="options"
+                          value="optionOne"
+                          onChange={this.handleRadio}
+                          checked={value === 'optionOne'}
+                        />
+                          {question.optionOne.text}
+                      </label>
+                      <label>
+                        <input
                         type="radio"
                         className="option-radio"
                         name="options"
                         value="optionTwo"
                         onChange={this.handleRadio}
                         checked={value === 'optionTwo'}
-                      />{question.optionTwo.text}
-                    </label>
+                      />
+                        {question.optionTwo.text}
+                      </label>
                   </form>
-                  <div className="unanswered-results-link">
+                  <div className="submit-results-wrapper">
                     <Button
-                      className="results-btn"
                       variant="secondary"
                       disabled={disabled}
                       onClick={this.handleResults}>Submit
@@ -113,50 +117,74 @@ class PollDetails extends Component {
                   </div>
                 </div>
               </div>
+
+              {/* back button */}
+              <div className="back-btn">
+                <Button
+                  variant="secondary"
+                  onClick={this.handleBackBtn}>Back
+                </Button>
+              </div>
             </Fragment> )
             : ( <Fragment>
-                <h2 className="vote-results-title">Results</h2>
-                <h3 className="info-user">{users[question.author].name} asked:</h3>
-                <div className="info-results">
+              <h2 className="vote-results-title">Results</h2>
+                <div className="user-info">
+
+                  {/* user name, image */}
                   <Image
                     className="user-photo"
                     src={users[question.author].avatarURL}
                     alt={users[question.author].name}
                   />
-                  <div className="info-results-wrapper">
-                    <div className="info-inner-wrapper">
-                      <div className="info-title info-title-space">Would you rather {optionOneText}?</div>
-                        {userVote === optOne
-                          ? <Badge
-                              variant="warning"
-                              className="badge-design">Your <br /> Vote
-                            </Badge> : null
-                         }
-                        <ProgressBar
-                          className="progress"
-                          style={{ height: 30, fontSize: 18 }}
-                          now={optionOnePercent}
-                          label={`${optionOnePercent}%`}
-                        />
-                        {optionOneVotes} out of {optionsTotal} votes
-                      </div>
-                      <div className="info-inner-wrapper">
-                       <div className="info-title info-title-space">Would you rather {optionTwoText}?</div>
-                         {userVote === optTwo
-                           ? <Badge
-                              variant="warning"
-                              className="badge-design">Your <br /> Vote
-                            </Badge> : null
-                         }
-                         <ProgressBar
-                           className="progress"
-                           style={{ height: 30, fontSize: 18 }}
-                           now={optionTwoPercent}
-                           label={`${optionTwoPercent}%`}
-                         />
-                         {optionTwoVotes} out of {optionsTotal} votes
-                      </div>
+                  <h3 className="user-heading">
+                    {users[question.author].name} asked:
+                  </h3>
+                </div>
+
+                {/* poll results */}
+                <div className="content-results-container">
+                  <div className="content-results-wrapper">
+                    <div className="space">
+                       Would you rather {optionOneText}?
                     </div>
+                      {userVote === optOne
+                        ? <Badge
+                            variant="warning"
+                            className="badge">Your Vote
+                          </Badge> : null
+                      }
+                      <ProgressBar
+                        className="progress"
+                        style={{ height: 30, fontSize: 18 }}
+                        now={optionOnePercent}
+                        label={`${optionOnePercent}%`}
+                      />
+                      {optionOneVotes} out of {optionsTotal} votes
+                  </div>
+                  <div className="content-results-wrapper">
+                    <div className="space">
+                      Would you rather {optionTwoText}?
+                    </div>
+                      {userVote === optTwo
+                        ? <Badge
+                            variant="warning"
+                            className="badge">Your Vote
+                          </Badge> : null
+                      }
+                      <ProgressBar
+                        className="progress"
+                        style={{ height: 30, fontSize: 18 }}
+                        now={optionTwoPercent}
+                        label={`${optionTwoPercent}%`}
+                      />
+                      {optionTwoVotes} out of {optionsTotal} votes
+                    </div>
+                  </div>
+                  <div className="back-btn">
+                    <Button
+                      variant="secondary"
+                      onClick={this.handleBackBtn}>Back
+                    </Button>
                   </div>
                 </Fragment>
               )}
