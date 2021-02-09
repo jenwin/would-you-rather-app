@@ -80,8 +80,9 @@ html,
 
 /********************nav********************/
 .nav-container {
-  margin: 0 15rem;
-  padding-top: 1rem;
+  background: #000;
+  color: #fff;
+  padding: 1.5rem;
 }
 
 .list-links {
@@ -96,23 +97,21 @@ html,
 .nav-links,
 .nav-links:hover,
 .nav-user {
-  color: #000;
+  color: #fff;
 }
 
 .nav-links:hover {
   text-decoration: underline;
 }
 
-.nav-user-img {
-  margin: 0 2rem;
+.nav-name {
+  margin: 0 1rem;
 }
 
 .nav-username {
   float: right;
-}
-
-.nav-name {
-  letter-spacing: 0.07rem;
+  margin-top: -0.4rem;
+  z-index: 1;
 }
 
 /********************home**************************/
@@ -372,6 +371,17 @@ html,
   font-weight: bold;
   padding: 0.5rem 0.5rem 0.5rem 1.5rem;
   width: 100%;
+}
+
+.fa-star {
+  font-size: 1.5rem;
+  padding-right: 0.4rem;
+  position: relative;
+  top: -0.07rem;
+}
+
+.fa-star:last-of-type {
+  padding-left: 0.4rem;
 }
 
 .leaderboard-title {

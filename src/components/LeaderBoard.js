@@ -13,7 +13,11 @@ class LeaderBoard extends Component {
     return (
       <div className="create-leaderboard-container">
         <div className="leaderboard-container">
-          <h3 className="leaderboard-title">Leaderboard</h3>
+          <h3 className="leaderboard-title">
+            <i className="fas fa-star"></i>
+            Leaderboard
+            <i className="fas fa-star"></i>
+          </h3>
           <ul className="leaderboard-list">
             {userPoints.map(points => (
               <li className="leaderboard-items" key={points.id}>

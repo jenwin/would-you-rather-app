@@ -38,7 +38,6 @@ class Nav extends Component {
             </div>
           </div>
           <div className="nav-username">
-          <span className="nav-name">{userId.name}</span>
             <Image
               src={userId.avatarURL}
               className="nav-user-img"
@@ -46,7 +45,9 @@ class Nav extends Component {
               height="35"
               rounded
             />
+            <span className="nav-name">{userId.name}</span>
             <Button
+              className="logout-btn"
               variant="secondary"
               onClick={this.handleLogout}>LOGOUT
             </Button>

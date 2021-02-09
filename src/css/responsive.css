@@ -7,20 +7,39 @@ and ( max-width: 568px ) {
 
 /********************portrait***************************/
 @media screen
+and ( max-width: 1400px )
+and ( orientation: portrait ) {
+  .nav-container {
+    background-color: #d2fff8;
+    padding: 0;
+  }
+
+  .nav-list,
+  .nav-links,
+  .nav-links:hover {
+    color: #000;
+  }
+
+  .nav-username {
+    margin-top: -1rem;
+    width: 100%;
+  }
+}
+
+@media screen
 and ( min-width: 416px )
 and ( max-width: 1400px )
 and ( orientation: portrait ) {
+  .nav-container {
+    background-color: #000;
+  }
+
   .leaderboard-container {
     margin: auto;
   }
 
-  .leaderboard-items {
-    margin: 1rem auto;
-  }
-
-  .leaderboard-name {
-    font-size: 1rem;
-    padding-top: 1.5rem;
+  .nav-user-img {
+    margin: 0 1rem;
   }
 }
 
@@ -29,379 +48,420 @@ and ( min-width: 769px )
 and ( max-width: 1400px )
 and ( orientation: portrait ) {
   .nav-container {
-    margin: 0 5rem;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
   }
 
+  .poll-home,
   .poll-list,
   .create-leaderboard-container,
   .leaderboard-container,
   .leaderboard-items {
-     width: 85%;
+    margin-top: 7rem;
+     width: 70%;
+  }
+
+  .nav-user-img,
+  .nav-name {
+    float: left;
+  }
+
+  .nav-name {
+    margin: 0;
+    top: 0.3rem;
+  }
+
+  .nav-name,
+  .list-links {
+    position: relative;
+  }
+
+  .nav-username {
+    margin-top: -2rem;
+  }
+
+  .list-links {
+    top: 6rem;
+  }
+
+  .leaderboard-list {
+    width: 100%;
+  }
+
+  .leaderboard-items {
+    margin: 0 auto 1rem auto;
+  }
+
+  .logout-btn {
+    float: right;
   }
 }
 
 @media screen
-and ( min-width: 416px )
 and ( max-width: 768px )
 and ( orientation: portrait ) {
   .nav-container {
-    margin: 0 1.5rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
   }
 
-  .create-question,
-  .leaderboard-title {
-    margin-bottom: 2rem;
+  .nav-username,
+  .logout-btn {
+    position: fixed;
+  }
+
+  .nav-username {
+    background: #000;
+    padding: 1rem;
+    top: 1rem;
+  }
+
+  .nav-user-img,
+  .nav-name {
+    float: left;
   }
 
   .poll-list,
-  .create-leaderboard-container,
-  .leaderboard-container,
-  .info-section {
-     width: 90%;
+  .poll-home,
+  .create-leaderboard-container {
+    margin-top: 10rem;
+  }
+
+  .poll-list,
+  .poll-home,
+  .create-leaderboard-container {
+    width: 90%;
+  }
+
+  .logout-btn {
+    right: 1rem;
+    top: 1rem;
+  }
+}
+
+@media screen
+and ( min-width: 650px )
+and ( max-width: 768px )
+and ( orientation: portrait ) {
+  .nav-name,
+  .list-links {
+    position: relative;
+  }
+
+  .nav-name {
+    margin-left: 0;
+    top: 0.25rem;
+  }
+
+  .list-links {
+    top: 7rem;
+  }
+}
+
+@media screen
+and ( min-width: 501px )
+and ( max-width: 542px )
+and ( orientation: portrait ) {
+  .nav-username {
+    background: #000;
+    margin-top: -1rem;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .nav-user-img,
+  .nav-name {
+    float: left;
+    margin-left: 0;
+  }
+
+  .nav-name,
+  .list-links {
+    position: relative;
+  }
+
+  .nav-name {
+    color: #fff;
+    top: 0.3rem;
+  }
+
+  .list-links {
+    top: 7rem;
+  }
+
+  .unanswered-container {
+    padding: 2rem 3rem;
   }
 }
 
 @media screen
 and ( max-width: 500px )
 and ( orientation: portrait ) {
-  .nav-container {
-    margin: 1rem 0 0 0;
-    padding: 0;
-  }
-
   .login-title {
     font-size: 2rem;
   }
 
-  .unanswered-container {
-    padding: 2rem;
+  .nav-container {
+    margin: 0;
+    padding-top: 1rem;
+  }
+
+  .poll-list {
+    margin-top: 2rem;
+  }
+
+  .poll-list,
+  .poll-home,
+  .create-leaderboard-container {
     width: 100%;
   }
 
-  .unanswered-link {
+  .list-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4.5rem;
+  }
+
+  .nav-username {
+    float: none;
+    margin-top: 1rem;
+    top: 0;
+  }
+
+  .list-links,
+  .nav-username {
+    margin-left: 1rem;
+  }
+
+  .nav-user-img {
     margin-left: 0;
   }
 
-  .nav-tabs .nav-link {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-    font-size: 0.9rem;
+  .logout-btn {
+    padding: 0.5rem;
   }
 
-  .nav-user-info,
-  .user-img,
-  .info-wrapper {
-    float: none;
+  .poll-home {
+    margin: 1.5rem auto;
   }
 
+  .unanswered-container {
+    padding: 2rem;
+  }
+
+  .create-leaderboard-container {
+    margin: 2rem 0 1rem 0;
+    padding: 1rem;
+  }
+
+  .leaderboard-list {
+    width: 95%;
+  }
+
+  .leaderboard-name-wrapper {
+    padding: 0.5rem 5rem 0.5rem 1rem;
+  }
+
+  .leaderboard-name {
+    text-align: left;
+  }
+
+  .author {
+    padding-top: 0;
+  }
+}
+
+@media screen
+and ( min-width: 410px )
+and ( max-width: 539px )
+and ( orientation: portrait ) {
+  .nav-container {
+    padding-top: 1.5rem;
+  }
+
+  .poll-home,
   .poll-list,
   .create-leaderboard-container {
-    border-radius: 0;
-    margin-top: 1rem;
-  }
-
-  .info-wrapper,
-  .poll-list,
-  .create-leaderboard-container,
-  .info-results-wrapper {
     width: 100%;
   }
 
-  .nav-container,
-  .poll-list,
-  .create-leaderboard-container {
-    text-align: center;
+  .leaderboard-container {
+    margin-top: 1rem;
   }
 
-  .back-btn {
-    float: left;
+  .nav-username {
+    float: none;
+    margin-top: 1rem;
+  }
+
+  .nav-list {
+    margin-right: 1rem;
+  }
+
+  .unanswered-container {
     padding: 2rem;
   }
 
   .create-leaderboard-container {
     padding: 1rem;
   }
+}
 
-  .nav-leaderboard,
-  .leaderboard-total {
-    margin-right: 0;
-  }
-
-  .leaderboard-items {
-    padding-bottom: 4.4rem;
-  }
-
-  .nav-user-info,
-  .user-img {
-    padding-top: 1rem;
-  }
-
-  .leaderboard-wrapper,
-  .leaderboard-total {
-    margin: 2.5rem 0 0 0;
-  }
-
-  .leaderboard-name {
-    font-size: 1rem;
-  }
-
-  .leaderboard-name,
-  .questions-asked,
-  .questions-answered {
-     margin-bottom: 1rem;
-     text-align: justify;
-  }
-
-  .info-inner-wrapper {
-    margin-top: 2rem;
-    width: 95%;
-  }
-
-  .info-results {
-    height: 38rem;
+@media screen
+and ( min-width: 411px )
+and ( max-width: 500px)
+and ( orientation: portrait ) {
+  .list-links {
+    flex-direction: row;
+    padding: 1rem 0 0 0.85rem;
   }
 }
 
 @media screen
-and ( max-width: 320px )
+and ( max-width: 415px )
+and ( orientation: portrait ) {
+  .nav-username {
+    background: #000;
+    margin: 0;
+    padding: 1.2rem;
+    width: 100%;
+  }
+
+  .nav-name {
+    color: #fff;
+    margin-top: 0.3rem;
+  }
+
+  .nav-name,
+  .nav-user-img {
+    float: left;
+  }
+}
+
+@media screen
+and ( max-width: 376px )
 and ( orientation: portrait ) {
   .nav-list {
     margin-right: 1rem;
   }
 
-  .nav-user-img {
-    margin: 0 1rem;
+  .nav-username {
+    margin-left: 0;
   }
 
-  .unanswered-link {
-    margin-top: 0;
+  .nav-name {
+    margin-left: 0.5rem;
   }
 
-  .nav-leaderboard {
-    margin-right: 0;
+  .list-links {
+    text-align: left;
   }
 
-  .leaderboard-wrapper {
-    margin: 2.5rem auto 1.5rem auto;
+  .content-wrapper {
+    padding: 0 1.5rem 1.3rem 1.5rem;
+  }
+}
+
+@media screen
+and ( max-width: 281px )
+and ( orientation: portrait ) {
+  .poll-questions-title-one {
+    font-size: 0.9rem;
   }
 
-  .leaderboard-total {
-    margin: auto;
+  .nav-username {
+    margin-left: -0.01rem;
   }
 
- .leaderboard-items {
-   display: flex;
-   flex-direction: column;
- }
+  .nav-tabs .nav-link {
+    font-size: 0.8rem;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+  }
 }
 
 /********************landscape********************/
 @media screen
-and ( min-width: 300px )
-and ( max-width: 1400px )
-and ( orientation: landscape ) {
-  .leaderboard-total {
-    margin-top: 0;
-  }
-}
-
-@media screen
-and ( min-width: 1025px )
-and ( max-width: 1400px )
-and ( orientation: landscape ) {
-  .poll-list,
-  .create-leaderboard-container,
-  .leaderboard-container {
-     width: 60%;
-  }
-
-  .leaderboard-container {
-    margin: auto;
-    width: 80%;
-  }
-}
-
-@media screen
-and ( min-width: 822px )
+and ( min-width: 825px )
 and ( max-width: 1024px )
 and ( orientation: landscape ) {
-  .nav-container {
-    margin: 0 5rem;
-  }
-
-  .poll-list,
-  .create-leaderboard-container {
-    width: 70%;
-  }
-
-  .leaderboard-container {
-    margin: auto;
-    width: 100%;
-  }
-
-  .leaderboard-items {
-     margin: 1rem auto;
-     width: 90%;
+  .unanswered-container {
+    padding: 2rem 4rem;
   }
 }
 
 @media screen
-and ( min-width: 812px )
 and ( max-width: 824px )
 and ( orientation: landscape ) {
   .nav-container {
-    margin: 0 2rem
+    background-color: #d2fff8;
+    margin-left: 0;
+    padding: 0;
+    text-align: center;
+    width: 95%;
   }
 
-  .poll-list,
-  .create-leaderboard-container {
-    width: 80%;
+  .nav-username {
+    background-color: #000;
+    margin-top: 0;
+    padding: 0.5rem;
+    position: fixed;
+    text-align: left;
+    top: 0;
+    width: 100%;
   }
 
-  .info-user {
-    margin-bottom: 2rem;
+  .list-links,
+  .nav-name {
+    position: relative;
   }
 
-  .leaderboard-items {
-    margin: 1rem auto;
-  }
-}
-
-@media screen
-and ( min-width: 731px )
-and ( max-width: 811px )
-and ( orientation: landscape ) {
-  .nav-container {
-    margin: 0 2rem;
+  .list-links {
+    left: 2.55rem;
+    top: 5rem;
   }
 
-  .nav-user-img {
-    margin: 0 0.5rem;
-  }
-
-  .poll-list,
-  .create-leaderboard-container {
-    width: 90%;
-  }
-
-  .results-container {
-    padding: 3rem 5rem;
-  }
-
-  .info-user {
-    margin-bottom: 2rem;
-  }
-
-  .leaderboard-items {
-    margin: 1rem auto;
-  }
-}
-
-@media screen
-and ( min-width: 641px )
-and ( max-width: 730px )
-and ( orientation: landscape ) {
-  .nav-container {
-    margin: 0 0.9rem;
+  .nav-list,
+  .nav-links,
+  .nav-links:hover {
+    color: #000;
   }
 
   .nav-user-img {
-    margin: 0 0.5rem;
+    margin-left: 1rem;
   }
 
-  .nav-list {
+  .nav-name {
+    margin-left: 0.5rem;
+    top: 0.1rem;
+  }
+
+  .logout-btn {
+    float: right;
     margin-right: 1rem;
   }
 
   .poll-list,
-  .create-leaderboard-container {
-    width: 90%;
+  .create-leaderboard-container,
+  .poll-home {
+    margin-top: 7rem;
+    width: 80%;
   }
 
-  .info-user {
-    margin-bottom: 2rem;
+  .leaderboard-container {
+    margin-top: 0;
   }
 
-  .leaderboard-wrapper {
-    margin-left: 1rem;
+  .create-leaderboard,
+  .unanswered-container {
+    padding: 2.5rem;
   }
 
-  .leaderboard-items {
-    margin: 1rem auto;
+  .leaderboard-list {
     width: 100%;
-  }
-
-  .nav-tabs .nav-link {
-    font-size: 1rem;
-  }
-
-  .info-results-wrapper {
-    width: 53%;
-  }
-}
-
-@media screen
-and ( min-width: 569px )
-and ( max-width: 640px )
-and ( orientation: landscape ) {
-  .nav-container {
-    margin: 0 1rem;
-  }
-
-  .poll-list,
-  .create-leaderboard-container {
-    border-radius: 0;
-    width: 100%;
-  }
-
-  .nav-tabs .nav-link {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-    font-size: 1rem;
-  }
-
-  .info-user {
-    margin-bottom: 2rem;
-  }
-
-  .leaderboard-items {
-    margin: 1rem auto;
-  }
-}
-
-@media screen
-and ( max-width: 568px )
-and ( orientation: landscape ) {
-  .nav-container {
-    margin: 0 1rem;
-  }
-
-  .poll-list,
-  .create-leaderboard-container {
-    border-radius: 0;
-    width: 100%;
-  }
-
-  .nav-tabs .nav-link {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-    font-size: 1rem;
-  }
-
-  .info-user {
-    margin-bottom: 2rem;
-  }
-
-  .leaderboard-wrapper {
-    margin-left: 1rem;
-  }
-
-  .user-photo {
-    height: 8rem;
-    width: 8rem;
-  }
-
-  .leaderboard-items {
-     margin: 1rem auto;
   }
 }
