@@ -32,6 +32,7 @@
     "semantic-ui-react": "^0.87.1",
     "serialize-javascript": "^2.1.2",
     "set-value": "2.0.1",
+    "ssri": "6.0.2",
     "websocket-extensions": "^0.1.4"
   },
   "scripts": {
