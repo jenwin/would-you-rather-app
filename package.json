@@ -2,7 +2,7 @@
   "name": "would-you-rather-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/jenwin/would-you-rather-app.git",
+  "homepage": "https://jenwin.github.io/would-you-rather-app/",
   "dependencies": {
     "@semantic-ui-react/event-stack": "^3.1.0",
     "acorn": "^5.7.4",

@@ -5,6 +5,7 @@ An app built with React and Redux. A user can login, ask and answer questions, v
 - Clone or Download
 - `npm install && npm start` to run the application
 - Launch project at `http://localhost:3000/`
+- Visit: [https://jenwin.github.io/would-you-rather-app](https://jenwin.github.io/would-you-rather-app/)
 
 ## License
 GNU General Public License v3.0
