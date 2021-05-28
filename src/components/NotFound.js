@@ -4,7 +4,10 @@ class NotFound extends Component {
   render() {
     return (
       <div className="error-page">
-        404. This page does not exist.
+          <p
+            style={{ color: '#000' }}>
+              404. This page does not exist.
+          </p>
       </div>
     );
   }
