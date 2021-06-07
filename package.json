@@ -41,7 +41,8 @@
     "set-value": "2.0.1",
     "ssri": "6.0.2",
     "url-parse": "^1.5.1",
-    "websocket-extensions": "^0.1.4"
+    "websocket-extensions": "^0.1.4",
+    "ws": "^7.4.6"
   },
   "scripts": {
     "start": "react-scripts start",
